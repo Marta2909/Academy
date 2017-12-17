@@ -19,3 +19,9 @@ g.print_tree('tree6.png')
 
 h = BinaryTree.create([3, 1, 2, 5, 4, 9, 7, 8, 6, 10])
 h.print_tree('tree7.png')
+
+i = BinaryTree.create([])
+i.print_tree('tree8.png')
+
+j = BinaryTree.create([5])
+j.print_tree('tree9.png')
