@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>A Web Page</title>
+  </head>
+
+  <body>
+    <header>
+      <nav role="navigation">
+        <a href="index.html" accesskey="h">Home</a>
+        <a href="products.html" accesskey="p">Products</a>
+        <a href="company.html" accesskey="c">Company</a>
+        <a href="blog.html" accesskey="b">Blog</a>
+      </nav>
+      <a href="index.html">
+        <img src="#" alt="Logo">
+      </a>
+    </header>
+
+    <main role="main">
+      <section>
+        <h1>Welcome to our page!</h1>
+        <p>A paragraph of text. Contains information about filling the form.
+          Contains information about filling the form. Contains information about filling the form.
+          Contains information about filling the form. Contains information about filling the form.
+          Contains information about filling the form.</p>
+        <form method="post" action="another_page.html" role="form">
+          <fieldset>
+            <legend>Form 1</legend>
+            <!-- checkboxes -->
+            <input type="checkbox" name="not_selected" id="not_selected"><label for="not_selected" accesskey="n">not selected</label><br>
+            <input type="checkbox" name="selected" id="selected"><label for="selected" accesskey="y">selected</label>
+
+            <br>
+
+            <!-- dropdown -->
+            <select name="dropdown" id="dropdown">
+              <option value="none" selected="selected">Select Option
+              <option value="A">A
+              <option value="B">B
+              <option value="C">C
+            </select>
+
+            <br>
+            <!-- radio buttons -->
+            <input type="radio" name="option" value="option1" id="option1" required><label for="option1" accesskey="1">Option 1</label>
+            <input type="radio" name="option" value="option2" id="option2" required><label for="option2" accesskey="2">Option 2</label>
+            <input type="radio" name="option" value="option3" id="option3" required><label for="option3" accesskey="3">Option 3</label>
+
+            <br>
+
+            <label for="name" accesskey="a">Name</label><input type="text" name="name" id="name" placeholder="Name" pattern="[a-zA-Z]+" required>
+            <label for="adddress" accesskey="b">Address</label><input type="text" name="address" id="address" placeholder="Address" pattern="[a-zA-Z][0-9]">
+            <label for="phone" accesskey="c">Phone</label><input type="tel" name="phone" id="phone" placeholder="Phone 123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" title="Please write phone only in the format: 123-145-789">
+
+            <a href="#">? More information</a>
+            <footer>
+              <hr>
+              <p>Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content.
+                 Disclaimer content. Disclaimer content. Disclaimer content. Disclaimer content.</p>
+            </footer>
+          </fieldset>
+          <input type="submit" value="Submit form">
+        </form>
+      </section>
+    </main>
+
+    <aside role="complementary">
+      <input type="search" name="search" id="search" placeholder="search" role="search">
+
+      <br>
+      <figure>
+        <img src="#" alt="Image">
+        <figcaption>Image description, really interesting things about this image</figcaption>
+      </figure>
+      <figure>
+        <img src="#" alt="Image">
+        <figcaption>Image description, really interesting things about this image</figcaption>
+      </figure>
+      <figure>
+        <img src="#" alt="Image">
+        <figcaption>Image description, really interesting things about this image</figcaption>
+      </figure>
+    </aside>
+
+  </body>
+
+</html>
