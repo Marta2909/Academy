@@ -23,8 +23,10 @@ class BinaryTreeTest < Minitest::Test
 # #bardziej skomplikowany przypadek, na przykład podany w pliku example.rb
   def test_create_bst_tree_from_array
     tree = BinaryTree.create([3, 1, 2, 9, 7, 8, 6])
-    assert tree.value != nil
-    assert tree.left != nil
-    assert tree.right != nil
+    assert tree.value == '6'
+    assert tree.left.class == BinaryTree
+    assert tree.right.class == BinaryTree
+    assert tree.left.value == '2'
+    assert tree.right.value == '8'
   end
 end

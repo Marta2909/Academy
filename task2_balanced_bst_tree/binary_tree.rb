@@ -24,14 +24,10 @@ class BinaryTree
     else
       sorted_array = array.sort # [1, 2, 3, 6, 7, 8, 9]
 
-      average_index = (sorted_array.length/2).floor #3
-      root_node = sorted_array[average_index] # 6
-      value = root_node
+      average_index = sorted_array.length/2 #3
 
-      children = sorted_array.partition {|e| e < root_node} # [[1,2,3],[6,7,8,9]]
-
-      left_child = children.first # [1,2,3]
-      right_child = children.last[1..children.last.length-1] # [7,8,9]
+      left_child = sorted_array.slice(0,average_index) # [1,2,3]
+      right_child = sorted_array.slice(average_index+1,sorted_array.length) # [7,8,9]
 
       if left_child.length >= 1
         left = self.create(left_child)
@@ -41,7 +37,7 @@ class BinaryTree
         right = self.create(right_child)
       end
 
-      BinaryTree.new(left, right, root_node)
+      BinaryTree.new(left, right, sorted_array[average_index])
     end
   end
 
