@@ -1,3 +1,3 @@
 require_relative 'tictactoe'
 
-puts Tictactoe.new.start_game
+puts Tictactoe.new.play_game
