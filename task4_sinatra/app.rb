@@ -14,14 +14,15 @@ enable :sessions
 helpers do
   def checkpassword(inputted_password)
     saved_password = File.open('password.txt','r')
-    array = saved_password.read.split(":")
+    line = saved_password.read
+    array = line.split(":")
     salt_string = array.first
     timestamp_string = array.last.chomp("\n\n")
-    hashed_password_from_file = Digest::SHA512.hexdigest(salt_string+'#'+'password'+'#'+timestamp_string)
+    password_string = array[1]
 
     hashed_inputted_password = Digest::SHA512.hexdigest(salt_string+'#'+inputted_password.to_s+'#'+timestamp_string)
 
-    if hashed_inputted_password == hashed_password_from_file
+    if hashed_inputted_password == password_string 
       true
     else
       false
@@ -51,7 +52,7 @@ get '/logged' do
   erb :log_out, { :locals => params }
 end
 
-post '/' do
+get '/logout' do
    session.clear
    redirect '/'
 end
