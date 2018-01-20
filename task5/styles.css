@@ -1,0 +1,139 @@
+html, body {
+	max-width: 100%;
+	height: 100%;
+	background-color: #f2f2f2;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+	color: red;
+}
+
+a:hover {
+	color: #af280a;
+	text-decoration: underline;
+}
+
+/* ---------------TOP -------------- */
+
+header {
+	max-width: 100%;
+	height: 10%;
+	background-color: white;
+	margin-top: -2rem;
+	padding-top: 2rem;
+}
+
+nav ul {
+	float: left;
+	padding-left: 1rem;
+}
+
+nav ul li {
+	display: inline;
+}
+
+nav ul li:not(:first-of-type)::before {
+	content: "| ";
+	color: red;
+}
+
+nav img {
+	max-width: 25%;
+	float: right;
+	padding-top: 1rem;
+	padding-right: 1rem;
+}
+
+/* -------------ARTICLE -------------- */
+
+main {
+	max-width: 75%;
+	float: left;
+	padding: 1rem;
+	box-sizing: border-box;
+}
+
+aside {
+	max-width: 25%;
+	float: right;
+	padding: 1rem;
+	box-sizing: border-box;
+}
+
+aside ul, main form, button {
+	background-color: white;
+	box-shadow: 0 0 0.5rem #bcbcbc;
+	list-style-type: none;
+	padding: 1rem 0;
+}
+
+/* ----------------MAIN -------------- */
+
+main form {
+	padding: 1rem;
+}
+
+section, hr, p {
+	display: block;
+}
+
+hr {
+  width: 100%;
+	clear: left;
+}
+
+.options, .extras {
+	width: 50%;
+	padding: 2rem 0;
+	box-sizing: border-box;
+}
+
+.options {
+	float: left;
+	display: block;
+}
+
+.options div, select {
+	margin: 1rem 2rem;
+}
+
+select {
+	background-color: transparent;
+	padding: 0.25rem 1rem;
+}
+
+.extras {
+	float: right;
+}
+
+.extras input, .more-info {
+	margin: 1rem 0;
+}
+
+.extras input {
+	display: block;
+	width: 80%;
+	border: 0.05rem solid #bcbcbc;
+}
+
+
+button {
+	float: right;
+	margin: 2rem -1rem 0 0;
+	padding: 0.5rem 1rem;
+	border: none;
+}
+
+/* ----------------ASIDE ------------- */
+
+input[type="search"] {
+	width: 100%;
+	border: 1px solid white;
+	border-radius: 1rem;
+}
+
+aside img {
+	max-width: 100%;
+}
