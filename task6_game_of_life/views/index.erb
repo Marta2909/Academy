@@ -1,0 +1,15 @@
+<p>Pozaznaczaj komórki, które mają być na starcie "żywe". Kliknij przycisk "następna iteracja" i obserwuj ich ewolucję</p>
+<form method="post" action="/next">
+<fieldset>
+  <table>
+    <% ROWS.times do |row| %>
+      <tr>
+        <% COLUMNS.times do |column| %>
+          <td>
+          	<input type="checkbox" name="checked_cell[]" value="<%= row %>_<%= column %>">
+          </td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</fieldset>

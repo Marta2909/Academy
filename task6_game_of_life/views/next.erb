@@ -1,0 +1,17 @@
+<p>Klikając przycisk obserwuj dalszą ewolucję</p>
+<form method="post" action="/next">
+<fieldset>
+  <table>
+    <% ROWS.times do |row| %>
+      <tr>
+        <% COLUMNS.times do |column| %>
+          <% if params[:checked_cell].include? "#{row}_#{column}" %>
+            <td class="filled"><input type="hidden" name="checked_cell[]" value="<%= row %>_<%= column %>"></td>
+          <% else %>
+            <td></td>
+          <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</fieldset>

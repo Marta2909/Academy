@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gra w życie</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css" />
+    <link href='http://fonts.googleapis.com/css?family=Bungee+Shade&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Gra w życie</h1>
+      </header>
+      <section>
+        <% if flash[:notice] %>
+          <p><%= flash[:notice] %></p>
+        <% end %>
+        <%= yield %>
+      </section>
+      <footer>
+          <input class='button' type='submit' value='Następna iteracja'>
+        </form>
+        <form action="/" method="get">
+          <input class='button' type="submit" value="Start">
+        </form>
+      </footer>
+    </div>
+  </body>
+</html>
