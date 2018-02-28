@@ -23,17 +23,16 @@ describe "./app.rb" do
     context "params[:checked_cell] not nil" do
 
       before(:each) do
-        post '/next', :checked_cells => ['1_3','2_3','3_3']
+        post '/next', checked_cell: ['1_3','2_3','3_3']
       end
 
       it 'renders next view' do
-        expect(last_response).to be_ok
         expect(last_response.body).to include 'Klikając przycisk'
       end
     end
     context "params[:checked_cell] is nil" do
       before(:each) do
-        post '/next', :checked_cells => nil
+        post '/next', checked_cell: nil
       end
       it "assigns flash[:notice] message" do
         expect(last_response.redirect?).to eq true
